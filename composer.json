@@ -1,0 +1,28 @@
+{
+	"name": "erliz/jira-api-client-guzzle-provider",
+	"description": "Http client provider for Atlassian Jira REST Api",
+	"minimum-stability": "dev",
+    "keywords": ["jira", "atlassian", "api", "client", "rest"],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Stanislav Vetlovskiy",
+			"email": "mrerliz@gmail.com"
+		}
+	],
+	"require": {
+        "php": ">=5.3.3",
+        "erliz/jira-api-client": "dev-master",
+        "guzzle/guzzle": "~3.9"
+	},
+	"autoload": {
+		"psr-0": {
+			"Erliz": "src"
+		}
+	},
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1"
+        }
+    }
+}
