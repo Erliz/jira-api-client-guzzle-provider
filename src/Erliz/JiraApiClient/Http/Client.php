@@ -50,6 +50,19 @@ class Client implements ClientInterface
     /**
      * @inheritdoc
      */
+    public function put($url, $params)
+    {
+        $request = $this->client->put($url, null, json_encode($params));
+        $this->setHeaders($request);
+
+        $response = $request->send();
+
+        return $response->getStatusCode() == 204;
+    }
+
+    /**
+     * @inheritdoc
+     */
     public function addHeader($name, $value)
     {
         $this->headers[$name] = $value;
