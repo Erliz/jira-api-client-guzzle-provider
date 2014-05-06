@@ -39,7 +39,7 @@ class Client implements ClientInterface
      */
     public function post($url, $params)
     {
-        $request = $this->client->post($url, null, $params);
+        $request = $this->client->post($url, null, json_encode($params));
         $this->setHeaders($request);
 
         $response = $request->send();
